@@ -9,12 +9,20 @@ const CTA = () => {
   return (
     <section className='bg-secondary '>
       <div
+        data-aos='fade-up'
+        data-aos-delay='700'
+        data-aos-duration='1300'
         className={clsx(
           'container mx-auto px-4',
           'gap-8 sm:items-center py-24 sm:py-40 mx-auto flex md:justify-between flex-col sm:flex-row'
         )}
       >
-        <div className='mt-4 md:mt-0 max-w-xl'>
+        <div
+          data-aos='fade-up'
+          data-aos-delay='700'
+          data-aos-duration='1300'
+          className='mt-4 md:mt-0 max-w-xl'
+        >
           <h2 className='mb-4 text-3xl md:text-4xl tracking-tight font-extrabold text-white '>
             Customised services
           </h2>

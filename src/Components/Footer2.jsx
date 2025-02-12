@@ -13,6 +13,9 @@ const Footer2 = () => {
     <footer className='bg-secondary'>
       <div className='container w-full mx-auto p-4 md:py-8  '>
         <div
+          data-aos='fade-up'
+          data-aos-delay='400'
+          data-aos-duration='800'
           className={clsx(
             'gap-y-4 sm:gap-0',
             ' flex flex-col sm:flex-row items-center ',

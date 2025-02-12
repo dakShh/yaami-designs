@@ -28,15 +28,15 @@ const Service = () => {
       <div className='z-10 relative container mx-auto px-4 sm:px-0'>
         <div className='mb-8 sm:mb-16 lg:mb-24'>
           <div
-            data-aos='zoom-in-up'
-            data-aos-delay='300'
+            data-aos='fade-right'
+            data-aos-delay='500'
             className={clsx('text-xl sm:text-2xl lg:text-3xl font-semibold', 'mb-5')}
           >
             {title}
           </div>
           <div
-            data-aos='zoom-in-up'
-            data-aos-delay='500'
+            data-aos='fade-right'
+            data-aos-delay='600'
             className={clsx('lg:text-6xl sm:text-5xl text-3xl font-bold', 'max-w-lg')}
           >
             {subTitle}
@@ -49,6 +49,7 @@ const Service = () => {
             return (
               <HomepageCard
                 key={index}
+                id={index}
                 title={service.title}
                 imgSrc={service.imageUrl}
                 windowWidth={windowWidth}

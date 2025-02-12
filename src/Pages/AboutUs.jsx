@@ -17,7 +17,7 @@ const AboutUs = () => {
       <Header />
 
       <div
-        data-aos='zoom-in-up'
+        data-aos='fade-down'
         data-aos-delay='400'
         style={{
           backgroundImage: `url(${Banner1})`,
@@ -38,7 +38,12 @@ const AboutUs = () => {
       </div>
       <div className='container mx-auto px-5 sm:px-0 min-h-screen mb-20'>
         <section>
-          <div className='mb-7 w-full' data-aos='zoom-in' data-aos-delay='100'>
+          <div
+            className='mb-7 w-full'
+            data-aos='fade-down'
+            data-aos-delay='400'
+            data-aos-duration='1200'
+          >
             <div
               className={clsx(
                 'z-[100] relative',
@@ -78,7 +83,12 @@ const AboutUs = () => {
             </div>
           </div>
         </section>
-        <section className='border-b border-white/40 pb-8 gap-8 items-center'>
+        <section
+          data-aos='fade-up'
+          data-aos-delay='400'
+          data-aos-duration='1300'
+          className='border-b border-white/40 pb-8 gap-8 items-center'
+        >
           <div className='flex flex-col md:flex-row justify-center gap-x-10 text-md'>
             <p className='mb-4'>
               With over a decade of experience in interior design, We have had the privilege of
@@ -94,10 +104,22 @@ const AboutUs = () => {
         </section>
 
         <section className=''>
-          <h2 className='text-3xl font-bold my-10 text-center'>Why Choose Yaami Designs?</h2>
+          <h2
+            data-aos='fade-up'
+            data-aos-delay='400'
+            data-aos-duration='1200'
+            className='text-3xl font-bold my-10 text-center'
+          >
+            Why Choose Yaami Designs?
+          </h2>
           <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-6'>
             <div>
-              <div className='p-6 flex flex-col items-center text-center'>
+              <div
+                data-aos='fade-up'
+                data-aos-delay='600'
+                data-aos-duration='1200'
+                className='p-6 flex flex-col items-center text-center'
+              >
                 <FaPaintBrush className='h-12 w-12 mb-4 text-5xl' />
                 <h3 className='font-bold mb-2 text-2xl'>Design That Speaks to You</h3>
                 <p className='text-sm text-white/60'>
@@ -108,7 +130,12 @@ const AboutUs = () => {
               </div>
             </div>
             <div>
-              <div className='p-6 flex flex-col items-center text-center'>
+              <div
+                data-aos='fade-up'
+                data-aos-delay='700'
+                data-aos-duration='1200'
+                className='p-6 flex flex-col items-center text-center'
+              >
                 <BiMessageCheck className='h-12 w-12 mb-4 text-5xl' />
                 <h3 className='font-bold mb-2 text-2xl'>Communication Is Key</h3>
                 <p className='text-sm text-white/60'>
@@ -119,7 +146,12 @@ const AboutUs = () => {
               </div>
             </div>
             <div>
-              <div className='p-6 flex flex-col items-center text-center'>
+              <div
+                data-aos='fade-up'
+                data-aos-delay='800'
+                data-aos-duration='1200'
+                className='p-6 flex flex-col items-center text-center'
+              >
                 <FaHandshake className='h-12 w-12 mb-4 text-5xl' />
                 <h3 className='font-bold mb-2 text-2xl'>A Friendly Team</h3>
                 <p className='text-sm text-white/60'>
@@ -132,7 +164,12 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section className='mt-32 text-center '>
+        <section
+          className='mt-32 text-center '
+          data-aos='fade-up'
+          data-aos-delay='600'
+          data-aos-duration='1200'
+        >
           <h2 className='text-2xl font-semibold mb-4'>Ready to Transform Your Space?</h2>
           <p className='mb-6'>
             {` Let's create a home that reflects your personality and meets your needs.`}

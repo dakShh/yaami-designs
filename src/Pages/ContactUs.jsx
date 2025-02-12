@@ -21,10 +21,31 @@ const ContactUs = () => {
       number: ''
     }
   })
-  console.log('error: ', form.formState.errors)
+
   const onSubmit = (values) => {
     console.log('values: ', values)
   }
+
+  const INFO_BLOCK_CONTENT = [
+    {
+      icon: <MdEmail className={'h-12 w-12 mb-4 text-5xl'} />,
+      title: 'Email us',
+      description:
+        'Have a project in mind or need more information about our interior design services? Send us an email, and we’ll be happy to assist.'
+    },
+    {
+      icon: <IoCall className={'h-12 w-12 mb-4 text-5xl'} />,
+      title: 'Speak with Us',
+      description:
+        'Want to discuss your design ideas or need a quick consultation? Give us a call to connect directly with our team. We’re here to provide personalized advice and guidance for your space.'
+    },
+    {
+      icon: <MdOutlineContactSupport className={'h-12 w-12 mb-4 text-5xl'} />,
+      title: 'Customer support',
+      description:
+        'For ongoing projects, technical assistance, or other inquiries, visit our support center. Explore FAQs, design tips, or submit a ticket for specialized help from our team.'
+    }
+  ]
 
   return (
     <div className='bg-secondary'>
@@ -51,7 +72,12 @@ const ContactUs = () => {
         </div>
       </div>
 
-      <div className='container mx-auto mt-20 z-50 relative px-8 sm:px-0 '>
+      <div
+        data-aos='fade-up'
+        data-aos-delay='700'
+        data-aos-duration='1800'
+        className='container mx-auto mt-20 z-50 relative px-8 sm:px-0 '
+      >
         <div className='mx-auto max-w-xl bg-neutral-800 shadow-xl py-10 px-12 rounded-xl'>
           <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col gap-y-8'>
             <div>
@@ -105,27 +131,15 @@ const ContactUs = () => {
           </form>
         </div>
         <div className='grid md:grid-cols-3 grid-cols-1 my-24 gap-16 px-4'>
-          <InfoBlock
-            icon={<MdEmail className={'h-12 w-12 mb-4 text-5xl'} />}
-            title={'Email us'}
-            description={
-              'Have a project in mind or need more information about our interior design services? Send us an email, and we’ll be happy to assist.'
-            }
-          />
-          <InfoBlock
-            icon={<IoCall className={'h-12 w-12 mb-4 text-5xl'} />}
-            title={'Speak with Us'}
-            description={
-              'Want to discuss your design ideas or need a quick consultation? Give us a call to connect directly with our team. We’re here to provide personalized advice and guidance for your space.'
-            }
-          />
-          <InfoBlock
-            icon={<MdOutlineContactSupport className={'h-12 w-12 mb-4 text-5xl'} />}
-            title={'Customer Support'}
-            description={
-              'For ongoing projects, technical assistance, or other inquiries, visit our support center. Explore FAQs, design tips, or submit a ticket for specialized help from our team.'
-            }
-          />
+          {INFO_BLOCK_CONTENT?.map((content, index) => (
+            <InfoBlock
+              key={index}
+              id={index}
+              icon={content.icon}
+              title={content.title}
+              description={content.description}
+            />
+          ))}
         </div>
         <Footer2 />
       </div>

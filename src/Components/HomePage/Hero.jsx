@@ -22,7 +22,7 @@ const Hero = (props) => {
 
   const navigate = useNavigate()
   return (
-    <div className='h-screen w-full relative'>
+    <div className='h-screen w-full relative overflow-hidden'>
       <Header />
       <div className=''>
         <div
